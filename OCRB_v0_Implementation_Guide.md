@@ -991,8 +991,5 @@ A typical OCRB v0 report MAY be structured as:
 ├── aggregate_summary.json
 └── disclosure.md
 
-yaml
-Copy code
-
 This structure is illustrative only and not required.
 
