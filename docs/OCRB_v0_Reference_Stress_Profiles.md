@@ -177,6 +177,33 @@ OCRB v0 defines the following canonical stress profiles.
 
 ---
 
+### 5.4 Example Parameterization (Non-Normative)
+
+These example values are provided to clarify what “moderate” and “severe” can mean quantitatively.
+They are **not** canonical OCRB v0 requirements, and implementations MAY vary while maintaining profile intent.
+
+The key requirement is that any chosen parameterization is:
+- explicitly declared,
+- seeded where stochastic,
+- applied consistently across runs,
+- and disclosed alongside ORI results.
+
+#### SP-1 Example (Moderate Constraint)
+- **SR-1 (Radiation):** 0.001 faults/hour/GB (independent; seeded)
+- **SR-2 (Thermal):** 90-minute cycle; amplitude = 1.15× on SR-1 probability
+- **SR-3 (Power):** 90% availability; interruptions = 300s; stochastic schedule (seeded)
+- **SR-4 (Network):** 50ms baseline; 30% jitter; 10% packet loss/disconnect probability (seeded)
+- **SR-5 (Isolation):** up to 30 minutes complete isolation; time-based trigger
+
+#### SP-2 Example (Severe Constraint)
+- **SR-1 (Radiation):** 0.01 faults/hour/GB (independent; seeded)
+- **SR-2 (Thermal):** 60-minute cycle; amplitude = 1.40× on SR-1 probability
+- **SR-3 (Power):** 70% availability; interruptions = 600s; stochastic schedule (seeded)
+- **SR-4 (Network):** 200ms baseline; 80% jitter; 30% packet loss/disconnect probability (seeded)
+- **SR-5 (Isolation):** up to 120 minutes complete isolation; time-based trigger
+
+---
+
 ## 6. Stress Profile Application Rules
 
 - Stress profiles MUST be applied consistently across all runs  
